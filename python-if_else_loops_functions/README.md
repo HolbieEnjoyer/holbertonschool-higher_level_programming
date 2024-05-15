@@ -1,1 +1,1 @@
-# Skibidi Edge
+# Skibidi Edge Rizz
