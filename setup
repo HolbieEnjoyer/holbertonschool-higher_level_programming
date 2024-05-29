@@ -14,7 +14,7 @@ cd ilahe
 git clone https://github.com/ilaahe04/holbertonschool-higher_level_programming
 cd holbertonschool-higher_level_programming
 cd $1
-find -type f ! -name "*.py" -exec rm {} \;
+find -type f ! -name "*.py" ! -name "*.txt" -exec rm {} \;
 mv * ../../../
 cd ../../../
 rm -rf ilahe
