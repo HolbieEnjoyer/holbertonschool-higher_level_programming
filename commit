@@ -1,4 +1,5 @@
 #/bin/bash
+apt-get install dos2unix
 git config --global user.name "HolbieEnjoyer"
 git config --global user.email "8698@holbertonstudents.com"
 chmod -R +x .
