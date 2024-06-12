@@ -25,7 +25,12 @@ def add_user():
         if user['username'] in all_users:
             return jsonify({"error": "User already exists"}), 400
         all_users[user['username']] = user
-        return jsonify({"message": "User added", "user": user})
+        return jsonify({"message": "User added", "user": {
+            "username": user.get('username'),
+            "name": user.get('name'),
+            "age": user.get('age'),
+            "city": user.get('city')
+        }})
 
 @app.route('/users/<username>')
 def user(username):
