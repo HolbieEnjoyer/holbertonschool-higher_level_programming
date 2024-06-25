@@ -1,2 +1,2 @@
 -- bashi
-SELECT *
+SHOW DATABASES;
