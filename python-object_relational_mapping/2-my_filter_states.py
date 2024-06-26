@@ -24,7 +24,7 @@ if __name__ == "__main__":
     cursor.execute("""
     SELECT *
     FROM states
-    WHERE name = '{}'
+    WHERE name = '{}' AND name IS NOT NULL
     ORDER BY id ASC;""".format(state_name_searched))
     result = cursor.fetchall()
 
