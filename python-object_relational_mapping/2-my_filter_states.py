@@ -21,11 +21,11 @@ if __name__ == "__main__":
     )
 
     cursor = db.cursor()
-    cursor.execute(f"""
+    cursor.execute("""
     SELECT *
     FROM states
-    WHERE name = '{state_name_searched}'
-    ORDER BY id ASC;""")
+    WHERE name = '{}'
+    ORDER BY id ASC;""".format(state_name_searched))
     result = cursor.fetchall()
 
     for x in result:
