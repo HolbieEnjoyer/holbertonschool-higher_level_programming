@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-"""koment"""
+"""
+This script connects to a MySQL database and selects all the rows from the 'states' table.
+"""
 
 import sys
 import MySQLdb as mysql
 
-"""main"""
 if __name__ == "__main__":
     mysql_username = sys.argv[1]
     mysql_password = sys.argv[2]
