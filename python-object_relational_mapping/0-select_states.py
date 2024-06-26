@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This script connects to a MySQL database and selects all the rows from the 'states' table.
+This script connects to a MySQL database
 """
 
 import sys
@@ -28,4 +28,3 @@ if __name__ == "__main__":
 
     cursor.close()
     db.close()
-    
