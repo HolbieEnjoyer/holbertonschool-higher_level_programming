@@ -6,6 +6,7 @@ This script connects to a MySQL database and selects all the rows from the 'stat
 import sys
 import MySQLdb as mysql
 
+"""This is the main function"""
 if __name__ == "__main__":
     mysql_username = sys.argv[1]
     mysql_password = sys.argv[2]
