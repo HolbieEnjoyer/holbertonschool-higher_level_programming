@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""koment"""
+
 import sys
 import MySQLdb as mysql
 
