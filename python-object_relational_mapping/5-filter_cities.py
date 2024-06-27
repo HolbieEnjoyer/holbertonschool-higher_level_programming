@@ -10,7 +10,7 @@ if __name__ == "__main__":
     mysql_username = sys.argv[1]
     mysql_password = sys.argv[2]
     database_name = sys.argv[3]
-    state_name_searched = sys.argv[4]
+    st_name = sys.argv[4]
 
     db = mysql.connect(
         host="localhost",
@@ -26,7 +26,7 @@ if __name__ == "__main__":
     FROM cities
     JOIN states ON cities.state_id = states.id
     WHERE BINARY states.name = %s AND states.name IS NOT NULL
-    ORDER BY cities.id ASC;""".format(state_name_searched), (state_name_searched, ))
+    ORDER BY cities.id ASC;""".format(st_name), (st_name, ))
     result = cursor.fetchall()
 
     for x in result:
