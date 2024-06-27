@@ -1,5 +1,5 @@
 #/bin/bash
-find . -type d -name "*.__pycache__" -print0 | xargs -0 rm -r --
+find . -name "__pycache__" -type d -exec rm -rf {} +
 git config --global user.name "HolbieEnjoyer"
 git config --global user.email "8698@holbertonstudents.com"
 chmod -R +x .
