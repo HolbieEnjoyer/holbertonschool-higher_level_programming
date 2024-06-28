@@ -24,6 +24,8 @@ def main():
 
     for state in session.query(State).filter(State.id == 2):
         state.name = "New Mexico"
+    session.commit()
+    session.close()
 
 
 if __name__ == "__main__":
