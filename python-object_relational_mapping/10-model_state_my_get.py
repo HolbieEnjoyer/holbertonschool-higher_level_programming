@@ -13,6 +13,7 @@ def main():
     usr = sys.argv[1]
     pwd = sys.argv[2]
     db_name = sys.argv[3]
+    st_name = sys.argv[4]
 
     engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}"
                            .format(usr, pwd, db_name))
@@ -22,8 +23,10 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for state in session.query(State).filter(State.name.like('%a%')).all():
-        print("{}: {}".format(state.id, state.name))
+    for state in session.query(State).filter(State.name == st_name).all():
+        print(state.id)
+        return
+    print("Not found")
 
 
 if __name__ == "__main__":
