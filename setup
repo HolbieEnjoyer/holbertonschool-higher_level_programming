@@ -9,13 +9,13 @@ mkdir $1
 cd $1
 cp ../README.md .
 cp ../commit .
-mkdir ilahe
-cd ilahe
-git clone https://github.com/kamurano/holbertonschool-higher_level_programming
+mkdir copywork
+cd copywork
+git clone https://github.com/nihad1213/holbertonschool-higher_level_programming
 cd holbertonschool-higher_level_programming
 cd $1
 find -type f ! -name "*.py" ! -name "*.txt" -exec rm {} \;
 mv * ../../../
 cd ../../../
-rm -rf ilahe
+rm -rf copywork
 ./commit
