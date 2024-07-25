@@ -2,7 +2,7 @@ function sayHello () {
   fetch('https://hellosalut.stefanbohacek.dev/?lang=fr')
     .then(result => {
       if (!(result.ok)) {
-        throw new Error('bayraaa');
+        throw new Error('not allowed!');
       }
       return result.json();
     })
@@ -10,6 +10,6 @@ function sayHello () {
       const dataRead = document.getElementById('hello');
       dataRead.innerHTML = data.hello;
     })
-    .catch(new Error('bayraa'));
+    .catch(new Error('not allowed!'));
 }
 sayHello();

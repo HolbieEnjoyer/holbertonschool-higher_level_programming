@@ -2,7 +2,7 @@ function fetchData () {
 	fetch('https://swapi-api.hbtn.io/api/people/5/?format=json')
 	  .then(response => {
 	    if (!(response.ok)) {
-              throw new Error('bayraa');
+              throw new Error('not allowed!');
             }
       	    return response.json();
           })

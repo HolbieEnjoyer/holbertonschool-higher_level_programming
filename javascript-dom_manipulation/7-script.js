@@ -2,7 +2,7 @@ function fetchMovie () {
   fetch('https://swapi-api.hbtn.io/api/films/?format=json')
     .then(response => {
       if (!(response.ok)) {
-        throw new Error('bayraa');
+        throw new Error('not allowed!');
       }
       return response.json();
     })
@@ -14,6 +14,6 @@ function fetchMovie () {
         listMovie.append(newElement);
       });
     })
-    .catch(Error('bayraa'));
+    .catch(Error('not allowed!'));
 }
 fetchMovie();
